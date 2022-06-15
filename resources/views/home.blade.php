@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.base')
 
-        <title>Laravel Crud</title>
+@section('Title', 'Homepage')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        
-    </head>
-    <body>
-        
-        <h1 class="text-center">Homepage Comics <i class="fa-solid fa-house-user"></i></h1>
-
-    </body>
-</html>
+@section('mainContent')
+<h1 class="text-center">Main section</h1>
+@endsection
