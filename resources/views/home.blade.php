@@ -13,7 +13,7 @@
     </head>
     <body>
         
-<h1>Homepage Comics</h1>
+        <h1 class="text-center">Homepage Comics <i class="fa-solid fa-house-user"></i></h1>
 
     </body>
 </html>
