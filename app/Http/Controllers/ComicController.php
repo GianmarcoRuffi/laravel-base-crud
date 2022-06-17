@@ -40,7 +40,9 @@ class ComicController extends Controller
     {
         $data = $request->all();
       
-        $newComic = Comic::create($data);
+        // $newComic = Comic::create($data);
+
+        $newComic->fill($data);
 
         // $title = $request->get('title');
 
@@ -59,7 +61,7 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -70,7 +72,7 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -82,7 +84,9 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $comic->update($data);
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -93,6 +97,7 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
